@@ -1,0 +1,76 @@
+{"button":[
+  {
+  "name": "景区介绍",
+  "sub_button":  [
+  	 {
+	  "type": "view",
+	  "name": "景区介绍",
+	  "url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx5b7493d652383835&redirect_uri=http%3A%2F%2Fwxpay.gold-finance.com.cn%2Fwechat4j%2FHelloServlet&response_type=code&scope=snsapi_base&state=1#wechat_redirect"
+   },
+     {
+	  "type": "view",
+	  "name": "游客须知",
+	  "url": "http://wx.easybao.com/tywechat/error"
+   },
+     {
+	  "type": "view",
+	  "name": "交通导航",
+	  "url": "http://api.map.baidu.com/geocoder?address=无锡灵山元一希尔顿逸林酒店&output=html&src=wx"
+   }
+  ]
+ },
+  {
+  "name": "精彩活动",
+  "sub_button":  [
+  	  {
+    "type": "view",
+    "name": "精彩活动",
+    "url": "http://wx.easybao.com/tywechat/error"
+   },
+      {
+    "type": "view",
+    "name": "会员卡购买",
+    "url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx5b7493d652383835&redirect_uri=http%3A%2F%2Fwxpay.gold-finance.com.cn%2Fwechat4j%2FXiadanServlet&response_type=code&scope=snsapi_base&state=1#wechat_redirect"
+   },
+      {
+    "type": "view",
+    "name": "新闻动态",
+    "url": "http://mp.weixin.qq.com/s?__biz=MzA3NTIwMjY0MQ==&mid=401266360&idx=1&sn=f28fb3aa6be7a8e1df8531dbcfd49d94&scene=1&srcid=0315FBfMjhpc52cbDJ5vhke7&from=groupmessage&isappinstalled=0#wechat_redirect"
+   },
+      {
+   "type": "view",
+    "name": "客服专线",
+    "url": "http://wx.easybao.com/tywechat/error"
+   }
+  ]
+ },
+  {"name": "预定",
+  "sub_button":  [
+  	  {
+    "type": "view",
+    "name": "门票预订",
+    "url": "http://wx.easybao.com/tywechat/error"
+   },
+   	  {
+    "type": "view",
+    "name": "套餐预订",
+    "url": "http://wx.easybao.com/tywechat/error"
+   },
+      {
+    "type": "view",
+    "name": "客房预订",
+    "url": "http://wx.easybao.com/tywechat/error"
+   },
+      {
+    "type": "view",
+    "name": "水云间预订",
+    "url": "http://wx.easybao.com/tywechat/error"
+   },
+      {
+    "type": "view",
+    "name": "其他景点预订",
+    "url": "http://wx.easybao.com/tywechat/error"
+   }
+  ]
+ }
+]}
