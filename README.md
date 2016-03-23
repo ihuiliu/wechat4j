@@ -1,4 +1,4 @@
-wechat4jDemo
+wechat4j
 ============
 
-demo for wechat4j 
+wechat4j 
