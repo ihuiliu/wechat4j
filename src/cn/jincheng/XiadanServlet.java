@@ -68,12 +68,12 @@ public class XiadanServlet extends HttpServlet {
 		orderRequest.setAttach("深圳分店");
 		orderRequest.setOut_trade_no(PayUtils.getOut_trade_no());
 		orderRequest.setFee_type("CNY");
-		orderRequest.setTotal_fee(10);
+		orderRequest.setTotal_fee(1);
 		orderRequest.setSpbill_create_ip(request.getRemoteAddr());
 		orderRequest.setTime_start(PayUtils.getTime_start());
 		orderRequest.setTime_expire(PayUtils.getTime_expire());
 		//orderRequest.setGoods_tag("");
-		orderRequest.setNotify_url(" http://wxpay.gold-finance.com.cn/wechat4j/PayBackServlet");
+		orderRequest.setNotify_url("http://wxpay.gold-finance.com.cn/wechat4j/PayBackServlet");
 		orderRequest.setTrade_type(TradeType.JSAPI);
 		//orderRequest.setProduct_id("");
 		orderRequest.setOpenid(oauthResponse.getOpenid());

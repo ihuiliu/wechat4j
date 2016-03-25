@@ -36,8 +36,12 @@ public class MyWechat extends WechatSupport {
 		String content = super.wechatRequest.getContent().trim();
 //		String msgId = wechatRequest.getMsgId();
 		logger.info(content);
+		if(content.equals("1")){
+			
+		}else{
+			content=TuLing.chatWithTuLing(content, wechatRequest.getFromUserName());
+		}
 		
-		content=TuLing.chatWithTuLing(content, wechatRequest.getFromUserName());
 		//文本测试
 		if(content.equals("1")){
 			 InputStream in=MyWechat.class.getClassLoader().getResourceAsStream("menu.txt");
@@ -60,7 +64,7 @@ public class MyWechat extends WechatSupport {
 			 me.createMenu(menu);
 			System.out.println("---------------------"+menu+"-------"+TokenProxy.accessToken());
 			
-			responseText("你好，hello world!<a href=\"http://www.baidu.com\">这是链接</a>");
+			responseText("创建菜单成功");
 		}
 		else if(content.equals("2")){
 			responseNew("图文消息", "测试图文消息", "http://upload.qqfuzhi.com/portal/showimg.php?img=e2dnYyk8PHEhIys9Y3t8Z3w9YGd8YXY9YmI9cHx%2BPHtnZ2NMen50f3xydz1wdHosPGFmYX8nTHEuJ3Z2IXFyJnUiICAqcnAnInYhcHJ2InAnKndycidwKyAgdnIqdiN1KitxdyojIysjcSAiJipyK3YqIXd1JCt1JyBxKnIkcCt1JyYkKysicCAjIiokKyogcHd1ICAhcXArciUjI3EhdyYjKiIncSclIiUqJyAkInEgKiV2IiEiJnEgKyp2cXV3cCEmJ3EjcHYqJHIrdytwIyYgIHIicHAgcXFwIiIldyIhNXIuISMrNXEuISMr", 
@@ -213,16 +217,22 @@ public class MyWechat extends WechatSupport {
 	 */
 	@Override
 	protected void subscribe() {
-		String FromUserName = wechatRequest.getFromUserName();
+		//String FromUserName = wechatRequest.getFromUserName();
 		//用户未关注时扫描二维码事件,会多一个EventKey和Ticket节点
-		String Ticket = wechatRequest.getTicket();
+		//String Ticket = wechatRequest.getTicket();
 
-		String result = "订阅事件FromUserName:" + FromUserName;
-		if(StringUtils.isNotBlank(Ticket)){
-			result = "扫描带场景值二维码事件FromUserName:" + FromUserName + ", Ticket:" + Ticket;
-		}
-		logger.info(result);
-		responseText(result);
+		//String result = "订阅事件FromUserName:" + FromUserName;
+		//if(StringUtils.isNotBlank(Ticket)){
+			//String result = "亲，您终于来了，小悦在此恭候多时/:coffee"+"\n";
+		//}
+		//logger.info(result);
+		responseText("亲，您终于来了，小悦在此恭候多时/:coffee"+"\n"
+				+"\n"
+				+"\n"
+				+"/:rose /:rose最新优惠："+ "\n"
+				+"１. 通过微信购买温泉门票的顾客，可在前台免费领取可乐一听/:,@-D"+ "\n"
+				+"２.【猛戳我！领取优惠券】"+ "\n"
+				+" 3.  点击此处购买温泉门票"+ "\n");
 	}
 	
 	/**
@@ -254,9 +264,10 @@ public class MyWechat extends WechatSupport {
 		String key = super.wechatRequest.getEventKey();
 		if(key.equals("kfzx")){
 			responseText("无锡金诚太悦欢迎您的光临！"+ "\n"
-						+"商务合作：Tel：0510-85356666转会籍部"+ "\n"
-						+"客服电话：Tel：0510-85356666"+ "\n"
- 
+						+"商务合作："+ "\n"
+						+ "Tel：0510-85356666转会籍部"+ "\n"
+						+"客服电话："+ "\n"
+						+"Tel：0510-85356666"+ "\n"
 						+"当然，如有任何疑问和建议，"+ "\n"
 						+"您也可以发邮件给我们：chenj@gold-finance.com.cn");
 		}else{

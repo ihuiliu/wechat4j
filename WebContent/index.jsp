@@ -60,7 +60,7 @@ function onBridgeReady(){
 	           "paySign" : "${paySign}" //微信签名 
 	       } ,
 	       function(res){     
-	           if(res.err_msg == "get_brand_wcpay_request：ok" ) {
+	           if(res.err_msg == "get_brand_wcpay_request:ok" ) {
 	        	   alert("ok");
 	           } else{
 	        	   alert("error");
